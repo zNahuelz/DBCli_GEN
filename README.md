@@ -3,8 +3,8 @@ Generador de contenido para tabla "clientes" de base de datos. Todos los resulta
 ## Requisitos
 
 - Python 3
-- argparse ```pip3 install argparse ```
-- requests ```pip3 install requests ```
+- argparse ```pip install argparse ```
+- requests ```pip install requests ```
 - random
 
 ## Argumentos
