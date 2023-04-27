@@ -52,6 +52,11 @@ args = parser.parse_args()
 if (args.cantidad <= 0):
     print("[ADVERTENCIA] : Debe ingresar un número igual o mayor a 0 al parametro de cantidad.")
 else:
-    listado = obtenerDatos(str(args.key),args.cantidad)
-    exportarResultado(listado,args.dni,args.nombre,args.apellidos,args.tabla)
-    print("[TERMINADO] : Número de registros generados: "+str(len(listado)))
+    try:
+        listado = obtenerDatos(str(args.key),args.cantidad)
+        exportarResultado(listado,args.dni,args.nombre,args.apellidos,args.tabla)
+        print("[TERMINADO] : Número de registros generados: "+str(len(listado)))
+    except:
+        print("[ERROR] : Comunicación incorrecta con la API. Revisar su API Key / funcionamiento de la API.")
+    
+    
